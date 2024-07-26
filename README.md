@@ -20,7 +20,7 @@ This project provides real-time flight status updates and notifications to passe
 ## Setup Instructions
 
 1. **Frontend**:
-   ```bash
+  
    cd frontend
    npm install
    npm start
@@ -66,14 +66,13 @@ Bootstrap/Material-UI for styling.
 
 
 
+#### json
 
-
-Backend API Responses
-1. Fetch All Flights (GET /api/flights/)
+**Backend API Responses**
+#### Fetch All Flights (GET /api/flights/)
 Response:
 
-json
-Copy code
+
 [
   {
     "_id": "60d9fbd6c045c8b2f8f6e4e9",
@@ -81,12 +80,14 @@ Copy code
     "status": "On Time",
     "gate": "A1"
   },
+  
   {
     "_id": "60d9fbd6c045c8b2f8f6e4ea",
     "number": "456",
     "status": "Delayed",
     "gate": "B2"
   },
+  
   {
     "_id": "60d9fbd6c045c8b2f8f6e4eb",
     "number": "789",
@@ -94,38 +95,38 @@ Copy code
     "gate": "C3"
   }
 ]
-2. Fetch Single Flight (GET /api/flights/<flight_id>)
+
+#### Fetch Single Flight (GET /api/flights/<flight_id>)
 Response:
 
-json
-Copy code
+
 {
   "_id": "60d9fbd6c045c8b2f8f6e4e9",
   "number": "123",
   "status": "On Time",
   "gate": "A1"
 }
-3. Update Flight (PUT /api/flights/<flight_id>)
+
+#### Update Flight (PUT /api/flights/<flight_id>)
 Request:
 
-json
-Copy code
+
 {
   "status": "Delayed",
   "gate": "A2"
 }
+
 Response:
 
-json
-Copy code
+
 {
   "success": "Flight updated"
 }
-4. Fetch User Notifications (GET /api/notifications/<user_id>)
+
+#### Fetch User Notifications (GET /api/notifications/<user_id>)
 Response:
 
-json
-Copy code
+
 {
   "_id": "userId123",
   "notifications": [
@@ -134,11 +135,10 @@ Copy code
     "App notifications: Enabled"
   ]
 }
-5. Update User Notifications (POST /api/notifications/<user_id>)
+
+#### Update User Notifications (POST /api/notifications/<user_id>)
 Request:
 
-json
-Copy code
 {
   "notifications": [
     "email@example.com",
@@ -146,10 +146,10 @@ Copy code
     "App notifications: Enabled"
   ]
 }
+
 Response:
 
-json
-Copy code
+
 {
   "success": "Notifications updated"
 }
