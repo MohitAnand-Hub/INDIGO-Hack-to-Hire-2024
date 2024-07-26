@@ -1,43 +1,19 @@
-# INDIGO-Hack-to-Hire-2024
+Backend
+Setup Instructions
+Create a virtual environment and activate it:
 
-# Flight Status and Notifications System
+python3 -m venv venv
+source venv/bin/activate
 
-## Description
-A system to provide real-time flight status updates and notifications to passengers.
+Install the required packages:
 
-## Features
-- Real-time flight status updates
-- Push notifications via SMS, email, or app
-- Integration with mock airport data
+pip install flask pymongo kafka-python
 
-## Tech Stack
-- Frontend: React.js
-- Backend: Flask (Python)
-- Database: MongoDB
-- Notifications: Kafka, Firebase Cloud Messaging
+Set up MongoDB:
 
-## Setup
-1. **Frontend**:
-    ```bash
-    cd flight-status-app
-    npm install
-    npm start
-    ```
+You can use a local MongoDB instance or MongoDB Atlas.
+Create a database named flightDB and collections flights and users.
+Set up Kafka:
 
-2. **Backend**:
-    ```bash
-    cd backend
-    source venv/bin/activate
-    pip install -r requirements.txt
-    python app.py
-    ```
-
-## Usage
-- Visit `http://localhost:3000` for the frontend.
-- Backend API available at `http://localhost:5000/api/flights`.
-
-## Additional Libraries Used
-- `axios` for API requests in React.
-- `pymongo` for MongoDB interaction in Flask.
-- `kafka-python` for Kafka integration.
-- `pyfcm` for Firebase Cloud Messaging.
+You can use a cloud service like Confluent Cloud or set up a local Kafka instance.
+Create a topic named flight_updates.
